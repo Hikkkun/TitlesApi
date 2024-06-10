@@ -1,0 +1,5 @@
+query fetchTachiyomiChapterPages($mangaId: ID!,  $chapterId: ID!) {
+    mangaTachiyomiChapterPages(mangaId: $mangaId, chapterId: $chapterId) {
+        pages { url }
+    }
+}

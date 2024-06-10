@@ -1,0 +1,15 @@
+query($slug: String!) {
+    manga(slug: $slug) {
+        id
+        slug
+        titles { content }
+        alternativeNames { content }
+        chapters
+        status
+        translitionStatus
+        branches { id lang chapters }
+        genres { id titles { content } }
+        tags { id titles { content } }
+        cover { id blurhash original { url } }
+    }
+}

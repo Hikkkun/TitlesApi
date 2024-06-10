@@ -1,0 +1,6 @@
+query($branchId: ID!, $after: String, $first: Int) {
+    mangaChapters(branchId: $branchId, after: $after, first: $first) {
+        pageInfo { endCursor hasNextPage }
+        edges { node { slug id name number volume } }
+    }
+}

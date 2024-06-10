@@ -1,0 +1,12 @@
+query searchTachiyomiManga($query: String) {
+  mangaTachiyomiSearch(query: $query) {
+    mangas {
+      id
+      slug
+      originalName { lang content }
+      titles { lang content }
+      alternativeNames { lang content }
+      cover { original { url } }
+    }
+  }
+}
