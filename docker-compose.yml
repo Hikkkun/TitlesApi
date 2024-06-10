@@ -2,6 +2,7 @@ version: "3.9"
 services:
   app:
     build: .
+    command: gunicorn -c config/gunicorn.conf.py main:app
     ports:
       - "8000:8000"
   nginx:
