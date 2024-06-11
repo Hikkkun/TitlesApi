@@ -6,7 +6,7 @@ from fastapi.templating import Jinja2Templates
 from .routers import manga, ranobe
 
 app = FastAPI()
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="/templates")
 
 app.include_router(manga.router)
 app.include_router(ranobe.router)
